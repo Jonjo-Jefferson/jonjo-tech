@@ -17,7 +17,6 @@ export default function Home() {
     setLoading(true);
     axios.get(url).then((response) => {
       setWeather(response.data);
-
     });
     setCity('');
     setLoading(false);
@@ -48,12 +47,15 @@ export default function Home() {
               placeholder='Search City'
             />
           </div>
-          <button className='btn btn-primary border-none' onClick={fetchWeather}>
+          <button
+            className='btn btn-primary border-none'
+            onClick={fetchWeather}
+          >
             <MagnifyingGlassIcon className='w-6' />
           </button>
         </form>
       </div>
-	  {weather.main && <Weather data={weather}/>}
+      {weather.main && <Weather data={weather} />}
     </div>
   );
 }

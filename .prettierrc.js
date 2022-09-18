@@ -1,8 +1,8 @@
 // prettier.config.js or .prettierrc.js
 module.exports = {
-  trailingComma: 'es7',
+  trailingComma: 'es5',
   semi: true,
   singleQuote: true,
-  printWidth: 100,
+  printWidth: 80,
   jsxSingleQuote: true,
 };
