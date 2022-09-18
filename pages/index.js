@@ -47,8 +47,8 @@ export default function Home() {
               placeholder='Search city'
             />
           </div>
-          <button onClick={fetchWeather}>
-            <MagnifyingGlassIcon className='w-6' />
+          <button className='w-5' onClick={fetchWeather}>
+            <MagnifyingGlassIcon />
           </button>
         </form>
       </div>
