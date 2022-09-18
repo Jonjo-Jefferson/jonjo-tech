@@ -2,6 +2,7 @@ import Head from 'next/head';
 import axios from 'axios';
 import { useState } from 'react';
 import Image from 'next/image';
+import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
 
 export default function Home() {
   const [city, setCity] = useState('');
@@ -33,6 +34,16 @@ export default function Home() {
         layout='fill'
         className='object-cover'
       />
+      <div className='relative flex'>
+        <form className=''>
+          <div>
+            <input type='text' placeholder='Search City' />
+          </div>
+          <button btn btn-primary onClick={fetchWeather}>
+            <MagnifyingGlassIcon />
+          </button>
+        </form>
+      </div>
     </div>
   );
 }
