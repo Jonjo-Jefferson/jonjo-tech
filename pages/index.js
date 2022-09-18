@@ -3,6 +3,7 @@ import axios from 'axios';
 import { useState } from 'react';
 import Image from 'next/image';
 import { MagnifyingGlassIcon } from '@heroicons/react/24/solid';
+import Weather from '../components/Weather';
 
 export default function Home() {
   const [city, setCity] = useState('');
@@ -16,7 +17,7 @@ export default function Home() {
     setLoading(true);
     axios.get(url).then((response) => {
       setWeather(response.data);
-      console.log(response.data);
+
     });
     setCity('');
     setLoading(false);
@@ -52,6 +53,7 @@ export default function Home() {
           </button>
         </form>
       </div>
+	  {weather.main && <Weather data={weather}/>}
     </div>
   );
 }
