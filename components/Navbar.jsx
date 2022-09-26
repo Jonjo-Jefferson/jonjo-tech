@@ -65,10 +65,10 @@ const Navbar = () => {
           <li className='flex'>
             <a
               rel='noopener noreferrer'
-              href='#'
+              href='/warhammer'
               className='flex items-center px-4 -mb-1 border-b-2 dark:border-transparent'
             >
-              Contact
+              Warhammer
             </a>
           </li>
         </ul>
